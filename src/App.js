@@ -12,7 +12,6 @@ import key from './key';
 import './App.css';
 
 const app = new Clarifai.App({
-  // apiKey: 'a432f04e023d4303a6714c9097b883dd'
   apiKey: key
  });
 
@@ -40,11 +39,11 @@ class App extends Component {
     }
   }
 
-  componentDidMount() {
-    fetch('http://localhost:3000/')
-      .then(res => res.json())
-      .then(console.log);
-  }
+  // componentDidMount() {
+  //   fetch('http://localhost:3000/')
+  //     .then(res => res.json())
+  //     .then(console.log);
+  // }
 
   calculateFaceLocation = (data) => {
     const clarifaiFace = data.outputs[0].data.regions[0].region_info.bounding_box;
